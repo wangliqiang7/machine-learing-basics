@@ -3,7 +3,7 @@
 1.git_learn
 ----
 git_learn.txt  保存的git常用操作命令及说明
-git——cheatsheet 友情附赠国外网友制作的Git Cheat Sheet，建议打印出来备用
+git_cheatsheet 友情附赠国外网友制作的Git Cheat Sheet，建议打印出来备用
 
 2.numpy_100
 ----
