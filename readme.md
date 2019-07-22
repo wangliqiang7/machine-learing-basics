@@ -19,3 +19,10 @@
     有答案代码和注释的文件
     你可以在100_Numpy_exercises_no_solution.ipynb 里输入代码，看看运行结果是否和100_Numpy_exercises.ipynb 里面的内容一致。
     备注：md文件是markdown文件，与ipynb文件内容一致。
+
+3.pandas
+----
+
+    1.pandas_morvan.ipynb pandas命令集合
+    2.www.txt 一个存储一些数据的txt,用作pandas读取数据实验用
+    3.student.pickle www.txt存做pickle形式
