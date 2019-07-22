@@ -2,14 +2,14 @@
 =====
 1.git_learn
 ----
-git_learn.txt  保存的git常用操作命令及说明
-git_cheatsheet 友情附赠国外网友制作的Git Cheat Sheet，建议打印出来备用
+1.git_learn.txt  保存的git常用操作命令及说明
+2.git_cheatsheet 友情附赠国外网友制作的Git Cheat Sheet，建议打印出来备用
 
 2.numpy_100
 ----
 使用方法
 文件夹有三个不同的ipynb文件:
-1. 100_Numpy_exercises_no_solution.ipynb 
+1.100_Numpy_exercises_no_solution.ipynb 
 没有答案代码的文件，这个是你做的练习
 2.100_Numpy_exercises_with_hint.ipynb
 没有答案代码的文件，但有提示，这个你也可以用来练习
