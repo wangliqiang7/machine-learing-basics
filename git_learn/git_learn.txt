@@ -1,0 +1,98 @@
+1.安装：下载
+$ git config --global user.name "Your Name"
+$ git config --global user.email "email@example.com"
+#Git是分布式版本控制系统，创建用户
+#注意gitconfig命令的--global参数，用表示你这台机器上所有的Git仓库都会使用这个配置，也可以对某个仓库指定不同的用户名和Email地址。
+
+2.创建版本库
+在目的目录：
+$ git init
+编辑文件后：
+$ git add readme.txt
+$ git commit -m "message"
+
+3.版本控制:
+$ git status #查看仓库当前的状态
+$ git diff readme.txt #查看文件具体修改内容
+
+$ git log #查看提交日志
+$ git log --oneline#一行显示日志
+
+4.版本回退：
+Git中，HEAD表示当前版本，也就是最新的提交，上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100。
+$ git reset --hard HEAD^ #回退到上一个版本
+$ git reset --hard id #回退到id号表示的版本
+$ git reflog #记录每一次命令
+
+5.撤销修改：
+#把readme.txt文件在工作区的修改全部撤销
+#两种情况：修改后还没有被放到暂存区，撤销修改就回到版本库的状态；已经添加到暂存区，又作了修改，撤销修改就回到添加到暂存区后的状态。
+$ git checkout -- readme.txt  #--很重要
+
+#gitreset命令既可以回退版本，也可把暂存区的修改回退到工作区。当我们用HEAD时，表示最新的版本
+$ git reset HEAD readme.txt
+
+6.删除文件
+$ git add test.txt
+$ git commit -m "add test.txt"
+$ rm test.txt
+$ git status
+
+#本地删除后，也删除版本库中文件
+$ git rm test.txt
+$ git commit -m "remove test.txt"
+
+#删错了，把误删的文件恢复到最新版本：
+$ git checkout -- test.txt
+
+
+7.创建与分支合并
+$ git checkout -b dev #创建dev分支，然后切换到dev分支
+#-b参数表示创建并切换，相当于以下两条命令
+$ git branch dev
+$ git checkout dev
+
+$ git branch#查看分支信息
+
+$ git merge dev#合并分支dev的内容
+
+$ git branch -d dev#删除dev分支
+
+#分支冲突，手动修改
+
+#查看分支合并图。
+$ git log --graph --pretty=oneline --abbrev-commit
+
+$ git stash #把当前工作暂存，等以后恢复并继续工作、
+$ git stash list
+#恢复stash，两种方法
+$ git stash pop #stash内容也删除
+
+$ git stash apply#恢复后，stash内容不删除，要用下面命令删除
+$ git stash drop
+
+$ git stash apply stash@{0}#恢复指定stash
+
+$ git branch -D feature-vulcan#丢弃一个没有被合并过的分支
+
+8.多人协作
+https://www.liaoxuefeng.com/wiki/896043488029600/900375748016320
+
+9.标签管理
+$ git tag v1.0#打标签
+$ git tag #查看标签信息
+$ git tag v0.9 f52c633#给指定版本 打标签
+$ git show v0.9
+#创建带有说明的标签，用-a指定标签名，-m指定说明文字：
+$ git tag -a v0.1 -m "version 0.1 released" 1094adb  
+$ git tag -d v0.1#删除标签
+$ git push origin v1.0#推送某个标签到远程
+$ git push origin --tags# 次性推送全部尚未推送到远程的标签
+#标签已推送，怎么删除
+$ git tag -d v0.9#先删除本地
+$ git push origin :refs/tags/v0.9#远程删除
+
+10.github
+$ git remote add origin https://github.com/wliq/git_practice.git
+$ git push -u origin master#第一次push
+$ git push origin master
