@@ -26,3 +26,8 @@
     1.pandas_morvan.ipynb pandas命令集合
     2.www.txt 一个存储一些数据的txt,用作pandas读取数据实验用
     3.student.pickle www.txt存做pickle形式
+
+4.GAN_train_tips_and_tricks
+----
+
+    一些使GAN训练稳定的tips和tricks
