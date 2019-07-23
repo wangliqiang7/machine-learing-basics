@@ -1,15 +1,8 @@
 # How to Train a GAN? Tips and tricks to make GANs work
 
-While research in Generative Adversarial Networks (GANs) continues to improve the
-fundamental stability of these models,
-we use a bunch of tricks to train them and make them stable day to day.
-
 Here are a summary of some of the tricks.
 
 [Here's a link to the authors of this document](#authors)
-
-If you find a trick that is particularly useful in practice, please open a Pull Request to add it to the document.
-If we find it to be reasonable and verified, we will merge it in.
 
 ## 1. Normalize the inputs
 
@@ -130,9 +123,3 @@ while lossG > B:
 - Apply on several layers of our generator at both training and test time
 - https://arxiv.org/pdf/1611.07004v1.pdf
 
-
-## Authors
-- Soumith Chintala
-- Emily Denton
-- Martin Arjovsky
-- Michael Mathieu
